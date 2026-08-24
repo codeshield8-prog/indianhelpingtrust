@@ -17,6 +17,7 @@ export default function Contact() {
     { icon: 'pin', color: 'text-brand-orange', label: 'Visit us', value: org.address },
     { icon: 'phone', color: 'text-brand-green', label: 'Call us', value: org.phone, href: `tel:${org.phone.replace(/[^+\d]/g, '')}` },
     { icon: 'mail', color: 'text-brand-blue', label: 'Email us', value: org.email, href: `mailto:${org.email}` },
+    { icon: 'whatsapp', color: 'text-brand-green', label: 'WhatsApp', value: 'Message us on WhatsApp', href: `https://wa.me/${org.whatsapp}`, external: true },
   ]
 
   return (
@@ -49,7 +50,11 @@ export default function Contact() {
                       {d.label}
                     </p>
                     {d.href ? (
-                      <a href={d.href} className="text-brand-ink hover:text-brand-blue">
+                      <a
+                        href={d.href}
+                        {...(d.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                        className="text-brand-ink hover:text-brand-blue"
+                      >
                         {d.value}
                       </a>
                     ) : (

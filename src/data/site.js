@@ -10,6 +10,7 @@ export const org = {
   tagline: 'Action towards empowerment',
   email: 'info@indianhelpingtrust.org',
   phone: '+91-8109553486',
+  whatsapp: '919967143486', // click-to-chat: https://wa.me/919967143486
   address: 'E-65, Inder Enclave Phase 2, Kirari Suleman Nagar, Delhi - 110086',
   reg: 'Registered Trust | Registration No. 7370/2017',
   socials: [
@@ -18,6 +19,7 @@ export const org = {
     { label: 'X (Twitter)', href: 'https://x.com/IndianHelping', icon: 'x' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/company/indianhelpingtrust/', icon: 'linkedin' },
     { label: 'YouTube', href: 'https://youtube.com/@indianhelpingtrust', icon: 'youtube' },
+    { label: 'WhatsApp', href: 'https://wa.me/919967143486', icon: 'whatsapp' },
   ],
 }
 
