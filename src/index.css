@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-brand-ink font-sans antialiased;
+  }
+}
+
+/* Gentle ken-burns for the active hero slide (kept subtle & slow). */
+@keyframes kenburns {
+  from {
+    transform: scale(1.005);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+.kenburns {
+  animation: kenburns 7s ease-out both;
+  transform-origin: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .kenburns {
+    animation: none;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[1200px] px-5 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply btn bg-brand-orange text-white hover:bg-brand-orangedark focus-visible:ring-brand-orange;
+  }
+  .btn-secondary {
+    @apply btn bg-brand-green text-white hover:bg-brand-greendark focus-visible:ring-brand-green;
+  }
+  .btn-outline {
+    @apply btn border-2 border-white/80 text-white hover:bg-white hover:text-brand-ink;
+  }
+  .btn-ghost {
+    @apply btn border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white;
+  }
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-[0.18em] text-brand-green;
+  }
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+}
