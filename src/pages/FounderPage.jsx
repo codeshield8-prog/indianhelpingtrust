@@ -1,9 +1,26 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { fp } from '../data/founderPage'
 import workImages from '../data/workImages'
 import SectionHeading from '../components/SectionHeading'
 import Icon from '../components/Icon'
+import Seo, { breadcrumb, SITE } from '../components/Seo'
+
+const founderJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Drx Chand Siddiqui',
+    alternateName: 'Quamruzzama',
+    jobTitle: 'Founder & Chairman',
+    worksFor: { '@type': 'NGO', name: 'Indian Helping Trust', url: SITE + '/' },
+    image: SITE + '/og-founder.png',
+    url: SITE + '/founder',
+  },
+  breadcrumb([
+    { name: 'Home', path: '/' },
+    { name: 'Founder', path: '/founder' },
+  ]),
+]
 
 function Chips({ items, tone = 'green' }) {
   const cls =
@@ -22,18 +39,18 @@ function Chips({ items, tone = 'green' }) {
 }
 
 export default function FounderPage() {
-  useEffect(() => {
-    const prev = document.title
-    document.title = 'Drx Chand Siddiqui | Founder & Chairman | Indian Helping Trust'
-    return () => {
-      document.title = prev
-    }
-  }, [])
-
   const firstImg = (key) => (workImages[key] || [])[0]?.src
 
   return (
     <>
+      <Seo
+        title="Drx Chand Siddiqui | Founder & Chairman | Indian Helping Trust"
+        description="Drx Chand Siddiqui (Quamruzzama) is the Founder & Chairman of Indian Helping Trust, which he initiated in 2017 in Muzaffarpur. Read his leadership story, vision and approach to community service."
+        path="/founder"
+        image="/og-founder.png"
+        type="profile"
+        jsonLd={founderJsonLd}
+      />
       {/* HERO */}
       <section className="relative overflow-hidden bg-white">
         <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-brand-green/10" />

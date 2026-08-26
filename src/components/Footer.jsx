@@ -41,6 +41,16 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/founder" className="transition-colors hover:text-white">
+                Meet Our Founder
+              </Link>
+            </li>
+            <li>
+              <Link to="/top-ngos-in-india" className="transition-colors hover:text-white">
+                Top NGOs in India
+              </Link>
+            </li>
           </ul>
         </div>
 

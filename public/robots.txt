@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Allow crawling of CSS/JS/assets required for rendering
+Allow: /assets/
+
+Sitemap: https://indianhelpingtrust.org/sitemap.xml

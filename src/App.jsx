@@ -8,6 +8,7 @@ import About from './pages/About'
 import Programs from './pages/Programs'
 import CoreTeam from './pages/CoreTeam'
 import FounderPage from './pages/FounderPage'
+import TopNgos from './pages/TopNgos'
 import GetInvolved from './pages/GetInvolved'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/core-team" element={<CoreTeam />} />
           <Route path="/founder" element={<FounderPage />} />
+          <Route path="/top-ngos-in-india" element={<TopNgos />} />
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

@@ -16,10 +16,21 @@ import {
 import SectionHeading from '../components/SectionHeading'
 import TeamMemberProfile from '../components/TeamMemberProfile'
 import Icon from '../components/Icon'
+import Seo, { breadcrumb } from '../components/Seo'
 
 export default function CoreTeam() {
   return (
     <>
+      <Seo
+        title="Core Team | Indian Helping Trust Leadership & Members"
+        description="Meet the core team of Indian Helping Trust — professionals from different backgrounds contributing to social work, including Rauful Azam, Imran Hussain Sikdar, Atauz Zaman Sikdar, Dheer Singh and Pyare Siddiqui."
+        path="/core-team"
+        image="/og-team.jpg"
+        jsonLd={breadcrumb([
+          { name: 'Home', path: '/' },
+          { name: 'Core Team', path: '/core-team' },
+        ])}
+      />
       {/* 1 · HERO */}
       <section className="relative overflow-hidden bg-white">
         <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-brand-green/10" />

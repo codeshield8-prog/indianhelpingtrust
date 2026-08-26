@@ -1,7 +1,15 @@
 import { Link } from 'react-router-dom'
+import Seo from '../components/Seo'
 
 export default function NotFound() {
   return (
+    <>
+      <Seo
+        title="Page Not Found | Indian Helping Trust"
+        description="The page you’re looking for doesn’t exist or has moved. Return to the Indian Helping Trust homepage."
+        path="/404"
+        noindex
+      />
     <section className="section bg-brand-mist">
       <div className="container-x flex min-h-[50vh] flex-col items-center justify-center text-center">
         <p className="text-7xl font-extrabold text-brand-green">404</p>
@@ -14,5 +22,6 @@ export default function NotFound() {
         </Link>
       </div>
     </section>
+    </>
   )
 }

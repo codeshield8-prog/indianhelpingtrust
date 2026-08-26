@@ -15,6 +15,7 @@ import Lightbox from '../components/Lightbox'
 import DonateCTA from '../components/DonateCTA'
 import Icon from '../components/Icon'
 import { iconBg } from '../components/colorMap'
+import Seo, { breadcrumb } from '../components/Seo'
 
 export default function Programs() {
   const [intlOpen, setIntlOpen] = useState(null)
@@ -36,6 +37,16 @@ export default function Programs() {
 
   return (
     <>
+      <Seo
+        title="Our Work & Programs | Indian Helping Trust Across India"
+        description="Explore Indian Helping Trust's work across India — humanitarian relief in Assam, Bihar and Gujarat, Swachh Bharat drives in Delhi and Bihar, education in Bangalore, youth & sports in Mysuru, and more."
+        path="/programs"
+        image="/og-programs.jpg"
+        jsonLd={breadcrumb([
+          { name: 'Home', path: '/' },
+          { name: 'Our Work', path: '/programs' },
+        ])}
+      />
       <PageHero eyebrow={workIntro.eyebrow} title={workIntro.title} text={workIntro.text} crumb="Our Work" />
 
       {/* Sectors overview */}

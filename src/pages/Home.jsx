@@ -7,6 +7,7 @@ import DonateCTA from '../components/DonateCTA'
 import HeroCarousel from '../components/HeroCarousel'
 import MomentsOfImpact from '../components/MomentsOfImpact'
 import Icon from '../components/Icon'
+import Seo from '../components/Seo'
 
 // Auto-load the REAL uploaded photos from src/assets/hero/ (slide-1.jpg, slide-2.jpg, …).
 // Drop the files in and they appear automatically — no code changes needed.
@@ -21,6 +22,12 @@ const slides = Object.keys(heroImages)
 export default function Home() {
   return (
     <>
+      <Seo
+        title="Indian Helping Trust | NGO for Community Development & Social Welfare"
+        description="Indian Helping Trust (IHT) is an Indian non-profit working on education, humanitarian relief, cleanliness drives, elderly care and youth engagement with communities across India."
+        path="/"
+        image="/og-home.jpg"
+      />
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-greentint">
         <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-brand-orange/10" />

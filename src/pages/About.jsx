@@ -3,6 +3,7 @@ import { about, stats } from '../data/site'
 import PageHero from '../components/PageHero'
 import SectionHeading from '../components/SectionHeading'
 import FounderSection from '../components/FounderSection'
+import Seo, { breadcrumb } from '../components/Seo'
 import DonateCTA from '../components/DonateCTA'
 import Icon from '../components/Icon'
 import mark from '../assets/iht-mark.jpg'
@@ -10,6 +11,16 @@ import mark from '../assets/iht-mark.jpg'
 export default function About() {
   return (
     <>
+      <Seo
+        title="About Indian Helping Trust | Our Mission, Vision & Values"
+        description="Learn about Indian Helping Trust — an Indian NGO founded in 2017 — its mission, vision and values, and the founder and team behind its community work across India."
+        path="/about"
+        image="/og-programs.jpg"
+        jsonLd={breadcrumb([
+          { name: 'Home', path: '/' },
+          { name: 'About', path: '/about' },
+        ])}
+      />
       <PageHero
         eyebrow="Who we are"
         title="About Indian Helping Trust"

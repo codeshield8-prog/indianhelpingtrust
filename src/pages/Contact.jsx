@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { org } from '../data/site'
 import PageHero from '../components/PageHero'
 import Icon from '../components/Icon'
+import Seo, { breadcrumb } from '../components/Seo'
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
@@ -22,6 +23,16 @@ export default function Contact() {
 
   return (
     <>
+      <Seo
+        title="Contact Indian Helping Trust | Get in Touch"
+        description="Contact Indian Helping Trust for questions, partnerships or volunteering. Reach the team by phone, email or WhatsApp, or send a message online."
+        path="/contact"
+        image="/og-home.jpg"
+        jsonLd={breadcrumb([
+          { name: 'Home', path: '/' },
+          { name: 'Contact', path: '/contact' },
+        ])}
+      />
       <PageHero
         eyebrow="Get in touch"
         title="Contact Us"

@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero'
 import SectionHeading from '../components/SectionHeading'
 import Icon from '../components/Icon'
 import { iconBg } from '../components/colorMap'
+import Seo, { breadcrumb } from '../components/Seo'
 
 const presets = ['500', '1500', '5000', '10000']
 
@@ -23,6 +24,16 @@ export default function GetInvolved() {
 
   return (
     <>
+      <Seo
+        title="Get Involved | Volunteer & Support Indian Helping Trust"
+        description="Support Indian Helping Trust — volunteer your time and skills, or contribute to community initiatives across India. Discover how you can be part of meaningful social change."
+        path="/get-involved"
+        image="/og-home.jpg"
+        jsonLd={breadcrumb([
+          { name: 'Home', path: '/' },
+          { name: 'Get Involved', path: '/get-involved' },
+        ])}
+      />
       <PageHero
         eyebrow="Get involved"
         title="Stand with us"
